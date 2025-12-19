@@ -2,9 +2,9 @@ name: CI/CD Pipeline
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "main" ]
 
 jobs:
   build:
@@ -19,3 +19,11 @@ jobs:
 
       - name: Тест қадамы
         run: echo "Тесттер сәтті өтті"
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Орналастыру
+        run: echo "Қосымша production ортасына орналастырылды"
