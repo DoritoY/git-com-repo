@@ -1,0 +1,2 @@
+Work for LPR 7–9 by Adilet
+git add .
